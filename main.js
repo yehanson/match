@@ -16,6 +16,7 @@ let newarray= [];
 let pair;
 let require;
 let order= 1;
+let br= 0;
 let first;
 let second;
 let third;
@@ -44,6 +45,12 @@ function print(){
 
     for(y= 0; y<newarray.length; y++){
         board.innerHTML+= `<img class='` + newarray[y] + `' src='Images/blank.png'>`;
+        br++;
+
+        if(br== 5){
+            board.innerHTML+= `<br>`;
+            br= 0;
+        };
     };
 };
 
